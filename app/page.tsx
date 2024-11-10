@@ -1,8 +1,23 @@
-import { Button } from "@/components/ui/button";
+
+import ContentSwitcher from "@/components/carrucel";
+import { AnimatedBeamDemo } from "@/components/ecosystem";
+import Hero from "@/components/hero";
+import Navbar from "@/components/navbar";
+import ProblemSection from "@/components/ProblemSection";
+import Servicegrid from "@/components/serviceGrid";
 
 
 export default function Home() {
   return (
-    <Button variant="destructive">Hola</Button>
+    <div className="bg-gray-50 overflow-x-hidden">
+    <Navbar />
+    <div className="bg-gradient-to-tl from-yellow-300 via-yellow-400 to-yellow-500">
+    <Hero />
+    </div>
+    <ProblemSection />
+    <AnimatedBeamDemo />
+    <ContentSwitcher />
+    <Servicegrid />
+    </div>
   );
 }
