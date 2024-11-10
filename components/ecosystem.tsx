@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const Card = forwardRef<
   HTMLDivElement,
-  { className?: string; title: string; description: string; icon: string }
->(({ className, title, description, icon }, ref) => {
+  { className?: string; title: string; icon: string }
+>(({ className, title, icon }, ref) => {
   return (
     <div
       ref={ref}
@@ -46,19 +46,16 @@ export function AnimatedBeamDemo() {
           <Card
             ref={div1Ref}
             title="Tri-Ecommerce"
-            description="Desarrollamos soluciones a medida para ecommerce, optimizando la venta online y la experiencia de usuario."
             icon="EC"
           />
           <Card
             ref={div2Ref}
             title="Tri-Marketing"
-            description="Ofrecemos estrategias de marketing digital para aumentar la visibilidad y el rendimiento de tu marca."
             icon="MK"
           />
           <Card
             ref={div3Ref}
             title="Tri-Stock"
-            description="Gestionamos inventarios de manera eficiente, integrando tecnologías para una gestión precisa y en tiempo real."
             icon="ST"
           />
         </div>
