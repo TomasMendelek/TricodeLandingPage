@@ -121,3 +121,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+::selection {
+  color: black; /* Color del texto seleccionado */
+  background-color: #ffee00; /* Color de fondo del texto seleccionado */
+}
