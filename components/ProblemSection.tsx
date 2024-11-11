@@ -6,7 +6,7 @@ export default function Component() {
     <section className="py-16 md:py-24">
       <div className="max-w-7xl m-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-12 md:mb-16">
-          <div className="text-sm font-medium text-primary">LAS SOLUCIONES</div>
+          <div className="text-sm font-light text-yellow-500 w-fit m-auto px-2 bg-yellow-50">LAS SOLUCIONES</div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-neutral-800">
             Tres sistemas integrados que optimizan la gestión de tu ecommerce
           </h2>

@@ -36,6 +36,8 @@ export function AnimatedBeamDemo() {
   const mainCardRef = useRef<HTMLDivElement>(null);
 
   return (
+    <>
+    <div className="text-sm font-light my-7 text-yellow-500 w-fit m-auto px-2 bg-yellow-50">Ecosistema</div>
     <div
       className="relative flex max-w-7xl mx-auto items-center justify-center overflow-hidden px-8 pb-4"
       ref={containerRef}
@@ -76,15 +78,15 @@ export function AnimatedBeamDemo() {
       <AnimatedBeam
         gradientStartColor="#fde047"
         gradientStopColor="#facc15"
-        duration={5}
+        duration={0}
         containerRef={containerRef}
         fromRef={div1Ref}
         toRef={mainCardRef}
-      />
+        />
       <AnimatedBeam
         gradientStartColor="#fde047"
         gradientStopColor="#facc15"
-        duration={5}
+        duration={0}
         containerRef={containerRef}
         fromRef={div2Ref}
         toRef={mainCardRef}
@@ -92,11 +94,12 @@ export function AnimatedBeamDemo() {
       <AnimatedBeam
         gradientStartColor="#fde047"
         gradientStopColor="#facc15"
-        duration={5}
+        duration={0}
         containerRef={containerRef}
         fromRef={div3Ref}
         toRef={mainCardRef}
       />
     </div>
+        </>
   );
 }

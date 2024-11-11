@@ -62,6 +62,8 @@ const cardVariants = {
 export default function Servicegrid() {
   return (
     <div className="max-w-7xl m-auto py-16">
+          <div className="text-sm font-light text-yellow-500 w-fit m-auto px-2 bg-yellow-50 mt-8 mb-5">Servicios</div>
+
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
