@@ -48,9 +48,9 @@ const ContactPage: React.FC = () => {
           {/* Información adicional */}
           <div className="flex flex-col space-y-6">
             <h2 className="text-2xl font-semibold text-gray-800">Nuestra Información</h2>
-            <p>Dirección: Calle Ficticia 123, Ciudad, País</p>
-            <p>Teléfono: +1 (555) 123-4567</p>
-            <p>Email: contacto@tricode.com</p>
+            <p>Somos de: Concepciom, Tucuman, Argentina</p>
+            <p>Teléfono: +54 9 3865-415222</p>
+            <p>Email: dev.tricode@gmail.com</p>
 
             {/* Redes sociales */}
             <div className="flex space-x-6 text-2xl text-black">
