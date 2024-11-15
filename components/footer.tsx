@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               Términos y Condiciones
               <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></span>
             </a>
-            <a href="#" className="text-white hover:text-yellow-500 relative group">
+            <a href="/contact" className="text-white hover:text-yellow-500 relative group">
               Contacto
               <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></span>
             </a>

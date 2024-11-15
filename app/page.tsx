@@ -19,7 +19,7 @@ export default function Home() {
       <ContentSwitcher />
       <Servicegrid />
       <Pricing />
-      <Footer /> {/* Agrega el Footer aquí */}
+      <Footer />
     </div>
   );
 }
