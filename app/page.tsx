@@ -5,7 +5,6 @@ import Navbar from "@/components/navbar";
 import Pricing from "@/components/pricing";
 import ProblemSection from "@/components/ProblemSection";
 import Servicegrid from "@/components/serviceGrid";
-import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <ContentSwitcher />
       <Servicegrid />
       <Pricing />
-      <Footer />
     </div>
   );
 }
