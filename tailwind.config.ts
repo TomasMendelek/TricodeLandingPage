@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
-
-const addVariablesForColors = ({ addBase, theme }: any) => {
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette"; // Ensure you add the type declaration
+import type { PluginAPI } from "tailwindcss/types/config";
+import 'tailwindcss-animate';
+const addVariablesForColors = ({ addBase, theme }: PluginAPI) => {
   const allColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
@@ -74,8 +75,7 @@ const config: Config = {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
-    addVariablesForColors, // Plugin para variables globales CSS de colores
+    addVariablesForColors,
   ],
 };
 
