@@ -1,4 +1,6 @@
 import ContentSwitcher from "@/components/carrucel";
+import { ClientsGrid } from "@/components/ClientsGrid";
+import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import ProblemSection from "@/components/ProblemSection";
@@ -15,7 +17,9 @@ export default function Home() {
       <ProblemSection />
       <ContentSwitcher />
       <Servicegrid />
+      <ClientsGrid />
       <TeamSection />
+      <Footer />
       {/*<Pricing />*/}
     </div>
   );

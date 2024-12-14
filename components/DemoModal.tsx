@@ -25,9 +25,9 @@ export function DemoModal() {
     <div className="py-40 flex items-center justify-center">
       <Modal>
         <ModalTrigger className="group/modal-btn">
-          <Button className="bg-black hover:bg-white text-white hover:text-black">
+          <span className="bg-black p-2 transition-all rounded-lg font-semibold duration-300 text-sm hover:bg-white text-white hover:text-black">
             Solicitar Demo
-          </Button>
+          </span>
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
