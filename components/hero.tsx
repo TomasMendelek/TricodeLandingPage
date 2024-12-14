@@ -9,7 +9,7 @@ export default function Component() {
         <div className="mb-8 flex justify-center">
           <span className="border-neutral-700 border bg-yellow-50 text-yellow-800 inline-flex items-center rounded-md px-4 py-1">
             <span className="mr-2 h-2 w-2 rounded-full bg-yellow-500" />
-            Nuevos Precios
+            Solicita tu demo
           </span>
         </div>
 

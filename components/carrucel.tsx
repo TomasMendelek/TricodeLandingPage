@@ -5,21 +5,25 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
+import { LinkPreview } from './ui/link-preview'
 
 const contentData = [
         {
-          "title": "Tri-Ecommerce",
+          "link": "https://tricodeadmin.com",
+          "title": "Tri-Dashboard",
           "subtitle": "Gestión Total del Ecommerce",
-          "description": "Con Tri-Ecommerce, puedes gestionar todos los aspectos de tu tienda en línea, desde productos y pedidos hasta clientes y pagos, todo desde un único dashboard fácil de usar.",
+          "description": "Con Tri-Dashboard, puedes gestionar todos los aspectos de tu tienda en línea, desde productos y pedidos hasta clientes y pagos, todo desde un único dashboard fácil de usar.",
           "image": "/images/tricodeadmin.png"
         },
         {
+          "link": "https://tricodeit.com",
           "title": "Tri-Marketing",
           "subtitle": "Automatización de Email Marketing",
           "description": "Tri-Marketing te permite crear campañas de email marketing personalizadas y automatizadas, integrándose perfectamente con tus herramientas y flujos de trabajo actuales.",
           "image": "/images/tricodeadmin.png"
         },
         {
+          "link": "https://tricodeit.com",
           "title": "Tri-Stock",
           "subtitle": "Control de Stock y Inventario Eficiente",
           "description": "Tri-Stock ofrece una solución robusta para gestionar tu inventario, asegurando una gestión precisa de stock y ayudándote a mantener tu negocio siempre bien abastecido.",
@@ -52,7 +56,9 @@ export default function ContentSwitcher() {
               transition={{ duration: 0.3 }}
               className="flex flex-col items-start text-start space-y-4"
             >
+              <LinkPreview url={contentData[currentIndex].link}>
               <h2 className='text-md font-black bg-yellow-400 rounded-md p-2'>{contentData[currentIndex].title}</h2>
+              </LinkPreview>
               <h3 className="text-3xl font-bold text-neutral-800">{contentData[currentIndex].subtitle}</h3>
               <p className="text-muted-foreground text-lg text-neutral-600">{contentData[currentIndex].description}</p>
               <div className="flex space-x-4 pt-8">

@@ -1,10 +1,9 @@
 import ContentSwitcher from "@/components/carrucel";
-import { AnimatedBeamDemo } from "@/components/ecosystem";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
-import Pricing from "@/components/pricing";
 import ProblemSection from "@/components/ProblemSection";
 import Servicegrid from "@/components/serviceGrid";
+import TeamSection from "@/components/teamsection";
 
 export default function Home() {
   return (
@@ -14,10 +13,10 @@ export default function Home() {
         <Hero />
       </div>
       <ProblemSection />
-      <AnimatedBeamDemo />
       <ContentSwitcher />
       <Servicegrid />
-      <Pricing />
+      <TeamSection />
+      {/*<Pricing />*/}
     </div>
   );
 }

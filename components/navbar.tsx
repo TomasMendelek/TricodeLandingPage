@@ -5,9 +5,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu"
+// import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
 import Drawer from "./ui/drawerNavbar"
+import { DemoModal } from "./DemoModal"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -33,13 +34,10 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center justify-between flex-grow ml-8">
-          <div className="flex-grow flex justify-center">
-            <NavItems />
-          </div>
+        <div className="hidden md:flex items-center justify-between  ml-8">
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="text-sm">Login</Button>
-            <Button className={cn(isScrolled ? "bg-yellow-400 hover:bg-yellow-400/90 text-black" : "bg-black hover:bg-white text-white hover:text-black")}>Get Started</Button>
+            <Button variant="ghost" className="text-sm">Contacto</Button>
+            <DemoModal />
           </div>
         </div>
 
@@ -58,7 +56,7 @@ export default function Navbar() {
   )
 }
 
-const NavItems = ({ isMobile = false }) => (
+/*  const NavItems = ({ isMobile = false }) => (
   <NavigationMenu>
     <NavigationMenuList className={isMobile ? "flex-col items-start" : ""}>
       <NavigationMenuItem>
@@ -67,10 +65,10 @@ const NavItems = ({ isMobile = false }) => (
           <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
             <li className="row-span-3">
               <NavigationMenuLink asChild>
-                <a href="/" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                <Link href="/" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                   <div className="mb-2 mt-4 text-lg font-medium">Feature Highlights</div>
                   <p className="text-sm leading-tight text-muted-foreground">Discover what makes our platform unique</p>
-                </a>
+                </Link>
               </NavigationMenuLink>
             </li>
           </ul>
@@ -82,10 +80,10 @@ const NavItems = ({ isMobile = false }) => (
           <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
             <li className="row-span-3">
               <NavigationMenuLink asChild>
-                <a href="/" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                <Link href="/" className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                   <div className="mb-2 mt-4 text-lg font-medium">Our Solutions</div>
                   <p className="text-sm leading-tight text-muted-foreground">Find the perfect solution for your needs</p>
-                </a>
+                </Link>
               </NavigationMenuLink>
             </li>
           </ul>
@@ -98,4 +96,5 @@ const NavItems = ({ isMobile = false }) => (
       </NavigationMenuItem>
     </NavigationMenuList>
   </NavigationMenu>
-)
+ )
+  */

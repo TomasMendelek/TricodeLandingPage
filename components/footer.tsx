@@ -1,76 +1,32 @@
-import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
+import { BackgroundBeams } from "./ui/background-beams"
+import { Button } from "./ui/button"
 
 const Footer: React.FC = () => {
   return (
-    <footer id='footer' className="bg-neutral-900 text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-start space-y-4 md:space-y-0">
-          {/* Elementos alineados a la izquierda */}
-          <div className="text-left">
-            <h2 className="text-white text-xl font-bold">Tricode</h2>
-            <p className="text-sm mt-2">Desarrollado por Tricode, agencia de software.</p>
-            <p className="text-sm mt-2">© {new Date().getFullYear()} Tricode. Todos los derechos reservados.</p>
-          </div>
+    <footer id='footer'>
+      <div className="h-[40rem] w-full rounded-t-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+      <div className="max-w-2xl mx-auto p-4">
+        <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+          ¿Quieres algun servicio?
+        </h1>
+        <p></p>
+        <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
+          Contanos tu idea, nosotros te ayudaremos a llevarla a cabo, puedes contactarte con nosotros a traves de nuestro <b className="text-[#25D366]">Whatsapp</b>
 
-          {/* Enlaces alineados a la derecha */}
-          <div className="flex flex-col md:flex-row md:space-x-5 text-center md:text-right space-y-4 md:space-y-0">
-            <a href="#" className="text-white hover:text-yellow-500 relative group">
-              FAQ
-              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></span>
-            </a>
-            <a href="#" className="text-white hover:text-yellow-500 relative group">
-              Términos y Condiciones
-              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></span>
-            </a>
-            <a href="/contact" className="text-white hover:text-yellow-500 relative group">
-              Contacto
-              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></span>
-            </a>
-            <a href="#" className="text-white hover:text-yellow-500 relative group">
-              Política de Privacidad
-              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></span>
-            </a>
-            <a href="#" className="text-white hover:text-yellow-500 relative group">
-              Soporte
-              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform"></span>
-            </a>
-          </div>
-        </div>
-
-        {/* Iconos de redes sociales alineados a la derecha */}
-        <div className="mt-6 flex justify-end space-x-6 text-xl">
-          <a
-            href="https://facebook.com"
-            className="text-white hover:text-yellow-500 hover:scale-110 transition-all duration-300 translate-y-[-20px]"
-            title="Facebook"
-          >
-            <Facebook className="stroke-2" />
-          </a>
-          <a
-            href="https://instagram.com"
-            className="text-white hover:text-yellow-500 hover:scale-110 transition-all duration-300 translate-y-[-20px]"
-            title="Instagram"
-          >
-            <Instagram className="stroke-2" />
-          </a>
-          <a
-            href="https://twitter.com"
-            className="text-white hover:text-yellow-500 hover:scale-110 transition-all duration-300 translate-y-[-20px]"
-            title="Twitter"
-          >
-            <Twitter className="stroke-2" />
-          </a>
-          <a
-            href="https://linkedin.com"
-            className="text-white hover:text-yellow-500 hover:scale-110 transition-all duration-300 translate-y-[-20px]"
-            title="LinkedIn"
-          >
-            <Linkedin className="stroke-2" />
-          </a>
-        </div>
+        </p>
+        <Button
+          className="relative flex justify-center items-center m-auto z-10 mt-4 hover:border hover:broder-[#25D366] transition-all duration-300"
+          variant="default"
+          size="lg"
+        >
+          Enviar Mensaje
+        </Button>
       </div>
+      <BackgroundBeams />
+    </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
+

@@ -1,6 +1,5 @@
 // app/layout.tsx
 import Navbar from '@/components/navbar';  // Asegúrate de usar la ruta correcta
-import Footer from '@/components/footer';
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
@@ -54,9 +53,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
-        <Navbar /> {/* Agregar Navbar aquí */}
-        <main>{children}</main> {/* Aquí se renderiza el contenido de cada página */}
-        <Footer /> {/* Agregar Footer aquí */}
+        <Navbar />
+        <main>{children}</main> 
       </body>
     </html>
   );
