@@ -1,19 +1,19 @@
 "use client"
 
 import { FC } from "react"
-import Link from "next/link"
 import { X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { DemoModal } from "../DemoModal"
+import Link from "next/link"
 
 interface DrawerProps {
   isOpen: boolean
   onClose: () => void
-  isScrolled: boolean
+
 }
 
-const Drawer: FC<DrawerProps> = ({ isOpen, onClose, isScrolled }) => {
+const Drawer: FC<DrawerProps> = ({ isOpen, onClose,  }) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -38,35 +38,25 @@ const Drawer: FC<DrawerProps> = ({ isOpen, onClose, isScrolled }) => {
                 <span className="sr-only">Close menu</span>
               </Button>
               <nav className="flex flex-col gap-4">
-                <Link href="/docs" passHref>
-                  <span className="text-lg font-medium text-gray-800 hover:text-gray-600" onClick={onClose}>
-                    Docs
-                  </span>
-                </Link>
-                <Link href="/pricing" passHref>
-                  <span className="text-lg font-medium text-gray-800 hover:text-gray-600" onClick={onClose}>
-                    Pricing
-                  </span>
-                </Link>
-                <Link href="/contact" passHref>
-                  <span className="text-lg font-medium text-gray-800 hover:text-gray-600" onClick={onClose}>
-                    Contact
-                  </span>
-                </Link>
-                <Button variant="ghost" className="justify-start" onClick={onClose}>
-                  Login
-                </Button>
-                <Button
-                  className={cn(
-                    "justify-start",
-                    isScrolled
-                      ? "bg-yellow-400 hover:bg-yellow-400/90 text-black"
-                      : "bg-black hover:bg-white text-white hover:text-black"
-                  )}
-                  onClick={onClose}
-                >
-                  Get Started
-                </Button>
+              <Link href="#EcoSistema" onClick={(e) => {
+                  e.stopPropagation();
+                  onClose();
+                }}>
+                  <Button variant="ghost" className="text-sm">EcoSistema</Button>
+              </Link>
+              <Link href="#Servicios" onClick={(e) => {
+                  e.stopPropagation();
+                  onClose();
+                }}>
+                  <Button variant="ghost" className="text-sm">Nuestros Servicios</Button>
+              </Link>
+              <Link href="#contact" onClick={(e) => {
+                  e.stopPropagation();
+                  onClose();
+                }}>
+                  <Button variant="ghost" className="text-sm">Contacto</Button>
+              </Link>
+                <DemoModal />
               </nav>
             </div>
           </motion.div>

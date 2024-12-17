@@ -36,7 +36,9 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center justify-between  ml-8">
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="text-sm">Contacto</Button>
+            <Link href="#contact" >
+              <Button variant="ghost" className="text-sm">Contacto</Button>
+            </Link>
             <DemoModal />
           </div>
         </div>
@@ -51,7 +53,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Drawer */}
-      <Drawer isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} isScrolled={isScrolled} />
+      <Drawer isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
     </header>
   )
 }

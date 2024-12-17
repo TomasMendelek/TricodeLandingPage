@@ -1,4 +1,6 @@
+"use client"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function Component() {
   return (
@@ -25,14 +27,16 @@ export default function Component() {
         </p>
 
         {/* Buttons */}
-        <div className="mt-14 flex justify-center space-x-4">
+        <div className="mt-14 flex flex-col md:flex-row space-y-2 md:space-y-0 justify-center md:space-x-4">
+          <Link href="#contact" className="w-full md:w-fit">
           <Button 
-            className="bg-neutral-950 text-white hover:bg-white hover:text-black px-10 py-5 text-md font-semibold transition-colors duration-300"
+            className="bg-neutral-950 text-white w-full  hover:bg-white hover:text-black md:px-10 md:py-5 text-md font-semibold transition-colors duration-300"
             >
             Comienza Ahora
           </Button>
+              </Link>
           <Button 
-            className="bg-white text-black border-2 border-black hover:bg-yellow-50 px-10 py-5 text-md font-semibold transition-colors duration-300"
+            className="bg-white text-black border-2 border-black hover:bg-yellow-50 md:px-10 md:py-5 text-md font-semibold transition-colors duration-300"
             >
             Ver Proyectos
           </Button>

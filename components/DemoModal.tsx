@@ -22,10 +22,10 @@ export function DemoModal() {
   };
 
   return (
-    <div className="py-40 flex items-center justify-center">
+    <div className="md:py-40  flex justify-start items-start md:items-center md:justify-center">
       <Modal>
         <ModalTrigger className="group/modal-btn">
-          <span className="bg-black p-2 transition-all rounded-lg font-semibold duration-300 text-sm hover:bg-white text-white hover:text-black">
+          <span className="bg-black p-2 w-full md:w-fit transition-all rounded-lg font-semibold duration-300 text-sm hover:bg-white text-white hover:text-black">
             Solicitar Demo
           </span>
         </ModalTrigger>

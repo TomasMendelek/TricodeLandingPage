@@ -61,8 +61,8 @@ const cardVariants = {
 
 export default function Servicegrid() {
   return (
-    <div className="max-w-7xl m-auto py-16">
-          <div className="text-sm font-light text-yellow-500 w-fit m-auto px-2 bg-yellow-50 mt-8 mb-5">Servicios</div>
+    <div id="Servicios" className="max-w-7xl m-auto py-16">
+      <div className="text-sm font-light text-yellow-500 w-fit m-auto px-2 bg-yellow-50 mt-8 mb-5">Servicios</div>
 
       <div className="container mx-auto px-4">
         <motion.h2
@@ -77,9 +77,10 @@ export default function Servicegrid() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-8 md:grid-cols-3"
         >
-          {services.map((service, index) => (
+          {/* Primera fila con 3 cards en pantallas grandes */}
+          {services.slice(0, 3).map((service, index) => (
             <motion.div key={index} variants={cardVariants}>
               <Card className="group relative overflow-hidden border-none h-full bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
                 <CardContent className="p-6">
@@ -98,6 +99,29 @@ export default function Servicegrid() {
               </Card>
             </motion.div>
           ))}
+
+          {/* Segunda fila con 2 cards centradas en pantallas grandes */}
+          <div className="col-span-1 md:col-span-3 flex flex-col items-center gap-8 md:flex-row md:justify-center">
+            {services.slice(3).map((service, index) => (
+              <motion.div key={index} variants={cardVariants} className="md:w-full h-full">
+                <Card className="group relative overflow-hidden border-none h-full bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <CardContent className="p-6">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      className="mb-4 inline-block rounded-lg bg-yellow-100 p-3"
+                    >
+                      <service.icon className="h-6 w-6 text-yellow-600" />
+                    </motion.div>
+                    <h3 className="mb-3 text-xl font-bold text-black">{service.title}</h3>
+                    <p className="text-gray-600">{service.description}</p>
+                    <div className="absolute bottom-4 right-4 text-8xl font-bold text-yellow-400 opacity-20 transition-opacity duration-300 group-hover:opacity-50">
+                      {service.number}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </div>
