@@ -26,7 +26,7 @@ const services = [
   {
     icon: Monitor,
     title: "MANTENIMIENTO",
-    description: "Los primeros 6 meses de mantenimiento gratis! Nos encargamos de mantener tus aplicaciones móviles y webs actualizadas, seguras y funcionando sin problemas.",
+    description: "Los primeros 3 meses de mantenimiento gratis! Nos encargamos de mantener tus aplicaciones móviles y webs actualizadas, seguras y funcionando sin problemas.",
     number: "04"
   },
   {

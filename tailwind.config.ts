@@ -25,6 +25,9 @@ const config: Config = {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
+      animation: {
+        "scroll-left": "scroll-left 15s linear infinite",
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

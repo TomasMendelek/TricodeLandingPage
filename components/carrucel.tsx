@@ -20,14 +20,14 @@ const contentData = [
           "title": "Tri-Marketing",
           "subtitle": "Automatización de Email Marketing",
           "description": "Tri-Marketing te permite crear campañas de email marketing personalizadas y automatizadas, integrándose perfectamente con tus herramientas y flujos de trabajo actuales.",
-          "image": "/images/tricodeadmin.png"
+          "image": "/images/Trimarketing2.webp"
         },
         {
           "link": "https://tricodeit.com",
           "title": "Tri-Stock",
           "subtitle": "Control de Stock y Inventario Eficiente",
           "description": "Tri-Stock ofrece una solución robusta para gestionar tu inventario, asegurando una gestión precisa de stock y ayudándote a mantener tu negocio siempre bien abastecido.",
-          "image": "/images/tricodeadmin.png"
+          "image": "/images/TriStock.webp"
         }
       ]
       

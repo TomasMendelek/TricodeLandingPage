@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 // import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
 import Drawer from "./ui/drawerNavbar"
-import { DemoModal } from "./DemoModal"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -27,8 +26,8 @@ export default function Navbar() {
     <header className={cn("fixed w-full z-50 transition-all duration-300", isScrolled ? "bg-white shadow-md" : "bg-transparent")}>
       <div className="container max-w-7xl m-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <div className={cn("size-6 rounded", isScrolled ? "bg-yellow-400" : "bg-transparent")}>
-            <Image src="/images/Tricode-logo-2.webp" alt="TricodeLogo" width={40} height={40} />
+          <div className={cn("size-12 rounded", isScrolled ? "bg-yellow-400" : "bg-transparent")}>
+            <Image src="/images/Tricode-logo-2.webp" alt="TricodeLogo" width={48} height={48} />
           </div>
           <span className="text-xl font-bold">Tricode</span>
         </Link>
@@ -39,7 +38,7 @@ export default function Navbar() {
             <Link href="#contact" >
               <Button variant="ghost" className="text-sm">Contacto</Button>
             </Link>
-            <DemoModal />
+            {/* <DemoModal /> */}
           </div>
         </div>
 

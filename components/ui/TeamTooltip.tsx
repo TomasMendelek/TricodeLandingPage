@@ -16,6 +16,13 @@ const people = [
     image:
       "https://avatars.githubusercontent.com/u/138630815?v=4",
     },
+    {
+      id: 3,
+      name: "Ramiro Paradí",
+      designation: "Desarollador",
+      image:
+        "/images/profile-Ramiro.jpg",
+      },
   {
     id: 4,
     name: "Sumate al equipo",

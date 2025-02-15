@@ -1,8 +1,10 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export default function Component() {
+  const router = useRouter()
   return (
     <>
     <div className="min-h-fit py-20">
@@ -11,7 +13,7 @@ export default function Component() {
         <div className="mb-8 flex justify-center">
           <span className="border-neutral-700 border bg-yellow-50 text-yellow-800 inline-flex items-center rounded-md px-4 py-1">
             <span className="mr-2 h-2 w-2 rounded-full bg-yellow-500" />
-            Solicita tu demo
+            Nuevo Eco-Sistema
           </span>
         </div>
 
@@ -35,10 +37,11 @@ export default function Component() {
             Comienza Ahora
           </Button>
               </Link>
-          <Button 
+          <Button
+            onClick={() => router.push("/#clientes")}
             className="bg-white text-black border-2 border-black hover:bg-yellow-50 md:px-10 md:py-5 text-md font-semibold transition-colors duration-300"
             >
-            Ver Proyectos
+            Ver Clientes
           </Button>
         </div>
       </div>
